@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.flex-cont-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-cont-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-cont-row.v-center,
+.flex-cont-col.h-center {
+  align-items: center;
+}
+
+.flex-cont-col.v-center,
+.flex-cont-row.h-center {
+  justify-content: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.header {
+  height: 70px;
+  background-color: #f39c12;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header h1 {
+  margin-right: auto;
+}
+
+.header h1 a {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.header .login {
+  font-size: 18px;
+}
+
+.header .login span {
+  margin-left: 8px;
+}
+
+.header .login a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .login a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding-top: 30px;
+  min-height: calc(100vh - 70px);
+  background-color: #f39c1222;
+  padding: 15px;
+  padding-top: 30px;
+}
+
+.content.login {
+  min-height: 100vh;
+  background-image: url('city_skyline.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.max-width {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.colors-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content .color {
+  min-width: 25%;
+  max-width: 25%;
+  flex: 1;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+.content .color .color-bg {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 5px;
+}
+
+.color-bg .color-cont {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+}
+
+.color-bg .color-cont span {
+  opacity: 0;
+  display: flex;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease opacity;
+  cursor: pointer;
+}
+
+.color-bg .color-cont span a {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.color-bg:hover .color-cont span {
+  opacity: 1;
+}
+
+.color-thumbnail {
+  padding: 20px;
+  margin-right: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+.color-name {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lobster Two", serif;
+}
+
+.color-code {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Montserrat", serif;
+  color: #888;
+}
+
+.color-data {
+  border-left: 2px solid #ccc;
+  padding-left: 30px;
+}
+
+.color-stats {
+  margin-top: 30px;
+}
+
+.color-component {
+  padding: 10px;
+  flex: 1;
+  height: 80px;
+}
+
+.color-component .color-slider {
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.color-component .color-slider .color-internal-slider {
+  border-radius: 8px;
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+}
+
+.color-component.red .color-internal-slider {
+  background-color: #ff0000;
+}
+
+.color-component.green .color-internal-slider {
+  background-color: #00ff00;
+}
+
+.color-component.blue .color-internal-slider {
+  background-color: #0000ff;
+}
+
+.login-cont {
+  border-radius: 8px;
+  padding: 30px;
+  background-color: #f39c12;
+}
+
+.form-cont h1 {
+  text-align: center;
+  font-family: "Lobster Two";
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.form-cont.add-color h1 {
+  color: #f39c12;
+}
+
+form>div {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 15px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 100%;
+  min-width: 400px;
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p.error {
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.tx-bold {
+  font-weight: bold;
+}
