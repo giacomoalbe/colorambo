@@ -46,39 +46,41 @@ if ($userLoggedIn != null) {
       <?php } ?>
     </div>
   </div>
-  <div class="content">
-    <div class="colors-container max-width">
-      <?php foreach ($colori as $color) { ?>
-      <div
-        class="color"
-      >
-        <div
-          class="color-bg"
-          style="background-color: <?=$color['code']?>"
-        >
-          <div class="color-cont">
-            <span>
-              <?php if (isset($color['is_add'])) { ?>
-              <a
-                href="aggiungi_colore.php"
-                style="color: #888"
-              >
-                Aggiungi Colore
-              </a>
-              <?php } else { ?>
-              <a
-                href="dettaglio.php?id=<?=$color['id']?>"
-                style="color: <?=$color['code']?>"
-              >
-                <?=$color['name']?>
-              </a>
-              <?php } ?>
-            </span>
-          </div>
+  <div class="content flex-cont-row">
+      <?php if (count($colori) > 0) { ?>
+        <div class="colors-container max-width flex-1">
+          <?php foreach ($colori as $color) { ?>
+            <div
+              class="color">
+              <div
+                class="color-bg"
+                style="background-color: <?=$color['code']?>">
+                <div class="color-cont">
+                  <span>
+                    <?php if (isset($color['is_add'])) { ?>
+                    <a
+                      href="aggiungi_colore.php"
+                      style="color: #888">
+                      Aggiungi Colore
+                    </a>
+                    <?php } else { ?>
+                    <a
+                      href="dettaglio.php?id=<?=$color['id']?>"
+                      style="color: <?=$color['code']?>">
+                      <?=$color['name']?>
+                    </a>
+                    <?php } ?>
+                  </span>
+                </div>
+              </div>
+            </div>
+          <?php } ?>
         </div>
-      </div>
+      <?php } else { ?>
+        <div class="no-colors-cont tx-center flex-1 v-center flex-cont-col">
+          <h3>Nessun colore da mostrare</h3>
+        </div>
       <?php } ?>
-    </div>
   </div>
   <script src="script.js"></script>
 </body>

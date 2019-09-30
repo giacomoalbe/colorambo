@@ -17,6 +17,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.tx-center {
+  text-align: center;
+}
+
 .flex-cont-row {
   display: flex;
   flex-direction: row;
@@ -275,5 +279,12 @@ p.error {
 }
 
 .tx-bold {
+  font-weight: bold;
+}
+
+.no-colors-cont h3 {
+  color: #f39c1266;
+  font-family: 'Lobster Two', serif;
+  font-size: 56px;
   font-weight: bold;
 }

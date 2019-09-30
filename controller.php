@@ -11,7 +11,13 @@ function getAllColors() {
 
   $resultSet = mysqli_query($conn, $sqlAllColors);
 
-  return mysqli_fetch_all($resultSet, MYSQLI_ASSOC);
+  $colorListFromDB = [];
+
+  if ($resultSet) {
+    $colorListFromDB = mysqli_fetch_all($resultSet, MYSQLI_ASSOC);
+  }
+
+  return $colorListFromDB;
 }
 
 function getColorFromId($colorId) {

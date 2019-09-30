@@ -26,7 +26,7 @@ function createDB($conn, $dbName) {
   $sqlCreateDatabase = "CREATE DATABASE $dbName";
 
   if (mysqli_query($conn, $sqlCreateDatabase)) {
-    echo "Database $dbName creato";
+    echo "Database $dbName creato <br>";
   } else {
     $errorCode = mysqli_errno($conn);
 
