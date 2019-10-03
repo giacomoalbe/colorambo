@@ -58,7 +58,7 @@ Per attivare i due passaggi sopraelencati, andremo a richiamare due file `php` c
 
 Andare nel browser e digitare il seguente indirizzo: 
 
-```http://localhost/colorambo/create_db.php```
+```http://localhost/colorambo/php/create_db.php```
 
 Una volta fatto questo dovrebbero comparire 4 scritte che indicano la corretta creazione del database e delle cartelle
 
@@ -66,7 +66,7 @@ Una volta fatto questo dovrebbero comparire 4 scritte che indicano la corretta c
 
 Andare nel browser e digitare il seguente indirizzo: 
 
-```http://localhost/colorambo/populate_db.php```
+```http://localhost/colorambo/php/populate_db.php```
 
 Questa pagina dovrebbe restituire il risultato della creazione dell'utente admin e di 3 colori (i colori primari della sintesi addittiva del colore - rosso, verde, blu -). 
 
@@ -100,5 +100,3 @@ Per i *BackEnd (BE)*, invece, i file da visionare sono i seguenti:
 * `utility.php`
 * `populate_db.php`
 * `create_db.php`
-
-

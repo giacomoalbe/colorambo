@@ -23,7 +23,6 @@ input[type="submit"] {
 
 .flex-cont-row {
   display: flex;
-  flex-direction: row;
 }
 
 .flex-cont-col {
@@ -98,7 +97,7 @@ body, html {
 
 .content.login {
   min-height: 100vh;
-  background-image: url('city_skyline.jpg');
+  background-image: url('../img/city_skyline.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -111,8 +110,8 @@ body, html {
 
 .colors-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .content .color {
