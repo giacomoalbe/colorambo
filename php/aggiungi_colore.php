@@ -14,7 +14,7 @@ if (isset($_POST['name'])) {
 
   addColor($name, $code);
 
-  header('Location: index.php');
+  header('Location: ../index.php');
   exit;
 }
 
@@ -29,7 +29,7 @@ if (isset($_POST['name'])) {
   <title>Colorambo | Aggiungi Colore ?></title>
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i|Montserrat+Alternates:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <div class="header">
@@ -42,7 +42,7 @@ if (isset($_POST['name'])) {
       <?php if ($userLoggedIn == null) { ?>
       <span>
         <i class="fas fa-user"></i>
-        <a href="login.php">Login</a>
+        <a href="..php/login.php">Login</a>
       </span>
       <?php } else { ?>
       <div>
@@ -83,6 +83,6 @@ if (isset($_POST['name'])) {
       </form>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require "controller.php";
+require "php/controller.php";
 //require "mock_controller.php";
 
 $colori = getAllColors();
@@ -22,7 +22,7 @@ if ($userLoggedIn != null) {
   <title>Colorambo v0.0.1</title>
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i|Montserrat+Alternates:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="header">
@@ -35,14 +35,14 @@ if ($userLoggedIn != null) {
       <?php if ($userLoggedIn == null) { ?>
       <span>
         <i class="fas fa-user"></i>
-        <a href="login.php">Login</a>
+        <a href="php/login.php">Login</a>
       </span>
       <?php } else { ?>
       <div>
         <i class="fas fa-user"></i>
         Ciao, <span class="tx-bold"><?=$userLoggedIn?></span>
       </div>
-      <a href="logout.php">Logout</a>
+      <a href="php/logout.php">Logout</a>
       <?php } ?>
     </div>
   </div>
@@ -59,13 +59,13 @@ if ($userLoggedIn != null) {
                   <span>
                     <?php if (isset($color['is_add'])) { ?>
                     <a
-                      href="aggiungi_colore.php"
+                      href="php/aggiungi_colore.php"
                       style="color: #888">
                       Aggiungi Colore
                     </a>
                     <?php } else { ?>
                     <a
-                      href="dettaglio.php?id=<?=$color['id']?>"
+                      href="php/dettaglio.php?id=<?=$color['id']?>"
                       style="color: <?=$color['code']?>">
                       <?=$color['name']?>
                     </a>
@@ -82,6 +82,6 @@ if ($userLoggedIn != null) {
         </div>
       <?php } ?>
   </div>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

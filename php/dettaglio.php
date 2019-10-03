@@ -32,12 +32,12 @@ $bluePercentage = ($color['blue'] / 255.0) * 100;
   <title>Colorambo | Dettaglio Colore <?=$color['name']?></title>
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i|Montserrat+Alternates:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <div class="header">
     <h1>
-      <a href="index.php">
+      <a href="../index.php">
           Colorambo
       </a>
     </h1>
@@ -102,6 +102,6 @@ $bluePercentage = ($color['blue'] / 255.0) * 100;
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
